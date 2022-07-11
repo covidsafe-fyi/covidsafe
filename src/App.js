@@ -5,6 +5,7 @@ import syringe from './assets/img/syringe.svg';
 import treatment from './assets/img/treatment.svg';
 import ventilation from './assets/img/ventilation-icon.svg';
 import vaccineSchedule from './assets/img/VaccinationScheduleAtAGlance-20.png';
+import React from 'react';
 
 function App() {
   return ( <div className="App">
@@ -14,7 +15,7 @@ function App() {
       <div className="toolkit">
         <div className="toolkit__wrap">
           <div className="toolkit__intro">
-            <a href='https://rrelyea.github.io/covid-safe'><h1 className="center">covid-safe</h1></a>
+            <a href='https://rrelyea.github.io/covid-safe'><h1 className="center">CovidSafe.fyi</h1></a>
             <p>Resources to keep yourself and others safe from COVID-⁠19.</p>
             <p>Curated content from government and other trusted sites.</p>
             <p>
@@ -203,7 +204,7 @@ function App() {
     </div>
   </main>
   Contact: <a href="https://linktr.ee/rrelyea">Rob Relyea</a><br/>
-  Open Source: <a href="https://github.com/rrelyea/covid-safe">github.com/rrelyea/covid-safe</a><br/>
+  Open Source: <a href="https://github.com/covidsafe.fyi/covidsafe">github.com/covidsafe.fyi/covidsafe</a><br/>
   <br/>
 
     </div>
