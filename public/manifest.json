@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CovidSafe.fyi",
+  "name": "CovidSafe.fyi: Vaccines, Evusheld, Masks, Tests, Ventilation, Test-to-Treat, Treatments",
   "icons": [
     {
       "src": "favicon.ico",
