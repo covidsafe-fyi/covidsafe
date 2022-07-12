@@ -571,7 +571,7 @@ function MedicineNavigator() {
     <>
     <div className='smallerCentered'>&nbsp;</div>
     <div className='smallerCentered'>
-        <b>Stay Covid-Safe:</b> <a href='https://rrelyea.github.io/covid-safe'>info about preventive medicines, protective measures, and treatments</a>
+        <b>Stay Covid-Safe:</b> <a href='/'>info about preventive medicines, protective measures, and treatments</a>
     </div>
     </>
     : false;
