@@ -15,26 +15,12 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route exact path='/' element={< App />}></Route>
-        
-        <Route exact path='/preventive-medicines' element={< App bookmark='preventive-medicines'  />}></Route>
-          <Route exact path='/vaccines' element={< App bookmark='vaccines'  />}></Route>
-            <Route exact path='/vaccine-time' element={< VaccineTime />}></Route>
-          <Route exact path='/immunocompromised' element={< App bookmark='immunocompromised'  />}></Route>
-            <Route exact path='/evusheld' element={ <Medicine typeLower='evusheld' type='Evusheld' dosesInBox='24' />}></Route>
-
-        <Route exact path='/protective-measures' element={< App bookmark='protective-measures'  />}></Route>
-          <Route exact path='/masks' element={< App bookmark='masks'  />}></Route>
-          <Route exact path='/ventilation' element={< App bookmark='ventilation'  />}></Route>
-          <Route exact path='/tests' element={< App bookmark='tests'  />}></Route>
-
-        <Route exact path='/have-covid' element={< App bookmark='have-covid'  />}></Route>
-          <Route exact path='/test-to-treat' element={< App bookmark='test-to-treat'  />}></Route>
-          <Route exact path='/treatments' element={< App bookmark='treatments'  />}></Route>
-            <Route exact path='/paxlovid' element={ <Medicine typeLower='paxlovid' type='Paxlovid' dosesInBox='20' />}></Route>
-            <Route exact path='/bebtelovimab' element={ <Medicine typeLower='bebtelovimab' type='Bebtelovimab' dosesInBox='5' />}></Route>
-            <Route exact path='/sotrovimab' element={ <Medicine typeLower='sotrovimab' type='Sotrovimab' dosesInBox='5'/>}></Route>
-            <Route exact path='/lagevrio' element={ <Medicine typeLower='lagevrio' type='Lagevrio (molnupiravir)' dosesInBox='24' />}></Route>
-          <Route exact path='/longcovid' element={< App bookmark='longcovid'  />}></Route>
+        <Route exact path='/vaccine-time' element={< VaccineTime />}></Route>
+        <Route exact path='/evusheld' element={ <Medicine typeLower='evusheld' type='Evusheld' dosesInBox='24' />}></Route>
+        <Route exact path='/paxlovid' element={ <Medicine typeLower='paxlovid' type='Paxlovid' dosesInBox='20' />}></Route>
+        <Route exact path='/bebtelovimab' element={ <Medicine typeLower='bebtelovimab' type='Bebtelovimab' dosesInBox='5' />}></Route>
+        <Route exact path='/sotrovimab' element={ <Medicine typeLower='sotrovimab' type='Sotrovimab' dosesInBox='5'/>}></Route>
+        <Route exact path='/lagevrio' element={ <Medicine typeLower='lagevrio' type='Lagevrio (molnupiravir)' dosesInBox='24' />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>,

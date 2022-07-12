@@ -19,9 +19,9 @@ function App() {
                 <p>Resources to keep yourself and others safe from COVID-⁠19.</p>
                 <p>Curated content from government and other trusted sites.</p>
                 <p>
-                  <b><a href='/preventive-medicines'>Preventive Medicines</a>:</b> <a href="/vaccines">Vaccines</a>, <a href="/immunocompromised">For Immunocompromised</a><br/>
-                  <b><a href='/protective-measures'>Protective Measures</a>:</b> <a href="/masks">Masks</a>, <a href="/ventilation">Air Ventilation</a>, <a href="/tests">Tests</a><br/>
-                  <b><a href='/have-covid'>Have Covid?</a>:</b> <a href="/test-to-treat">Test-to-Treat</a>, <a href="/treatments">Treatments</a>, <a href="/longcovid">LongCovid</a>             </p>
+                  <b><a href='#preventive-medicines'>Preventive Medicines</a>:</b> <a href="#vaccines">Vaccines</a>, <a href="#immunocompromised">For Immunocompromised</a><br/>
+                  <b><a href='#protective-measures'>Protective Measures</a>:</b> <a href="#masks">Masks</a>, <a href="#ventilation">Air Ventilation</a>, <a href="#tests">Tests</a><br/>
+                  <b><a href='#have-covid'>Have Covid?</a>:</b> <a href="#test-to-treat">Test-to-Treat</a>, <a href="#treatments">Treatments</a>, <a href="#longcovid">LongCovid</a>             </p>
               </div>
 
               <h2 id="preventive-medicines" className="line-title">Preventive Medicines</h2>
