@@ -15,13 +15,13 @@ function App() {
       <div className="toolkit">
         <div className="toolkit__wrap">
           <div className="toolkit__intro">
-            <a href='https://rrelyea.github.io/covid-safe'><h1 className="center">CovidSafe.fyi</h1></a>
+            <a href='/'><h1 className="center">CovidSafe.fyi</h1></a>
             <p>Resources to keep yourself and others safe from COVID-⁠19.</p>
             <p>Curated content from government and other trusted sites.</p>
             <p>
-              <b><a href='#preventive-medicines'>Preventive Medicines</a>:</b> <a href="#vaccines">Vaccines</a>, <a href="#immunocompromised">For Immunocompromised</a><br/>
-              <b><a href='#protective-measures'>Protective Measures</a>:</b> <a href="#masks">Masks</a>, <a href="#ventilation">Air Ventilation</a>, <a href="#tests">Tests</a><br/>
-              <b><a href='#have-covid'>Have Covid?</a>:</b> <a href="#test-to-treat">Test-to-Treat</a>, <a href="#treatments">Treatments</a>, <a href="#longcovid">LongCovid</a>             </p>
+              <b><a href='/preventive-medicines'>Preventive Medicines</a>:</b> <a href="/vaccines">Vaccines</a>, <a href="/immunocompromised">For Immunocompromised</a><br/>
+              <b><a href='/protective-measures'>Protective Measures</a>:</b> <a href="/masks">Masks</a>, <a href="/ventilation">Air Ventilation</a>, <a href="/tests">Tests</a><br/>
+              <b><a href='/have-covid'>Have Covid?</a>:</b> <a href="/test-to-treat">Test-to-Treat</a>, <a href="/treatments">Treatments</a>, <a href="/longcovid">LongCovid</a>             </p>
           </div>
 
           <h2 id="preventive-medicines" className="line-title">Preventive Medicines</h2>
@@ -68,10 +68,10 @@ function App() {
               &#8729; <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-authorizes-revisions-evusheld-dosing" rel="noopener">Evusheld dose should be repeated every 6 months (fda.gov)</a>
 
               <p>If you are moderately to severely immunocompromised, for many finding Evusheld isn't as easy as it should be.</p>
-              &#8729; <a href="https://rrelyea.github.io/evusheld" rel="noopener">Evusheld locator</a>
+              &#8729; <a href="/evusheld" rel="noopener">Evusheld locator</a>
 
               <p>Tips and trick to get Evusheld if you are qualified</p>
-              &#8729; <a href="https://rrelyea.github.io/evusheld/guide/" rel="noopener">Evusheld Guide</a>
+              &#8729; <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
                
               </div>
             </div>
@@ -174,9 +174,9 @@ function App() {
                   <span>Treatments</span>
                 </h3>
                 <p>You need to get a prescription for a treatment from your doctor, a <a href="https://aspr.hhs.gov/TestToTreat">Test-to-Treat location</a>, or a telehealth doctor. Then find a pharmacy near you with these treatments in stock:</p>
-                &#8729; <a href="https://rrelyea.github.io/paxlovid" rel="noopener">Paxlovid locator</a> (consult <a href='https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/ritonavir-boosted-nirmatrelvir--paxlovid-/paxlovid-drug-drug-interactions/'>drug-drug interactions</a>)<br/>
-                &#8729; <a href="https://rrelyea.github.io/bebtelovimab" rel="noopener">Bebtelovimab locator</a><br/> 
-                &#8729; <a href="https://rrelyea.github.io/lagevrio" rel="noopener">Molnuripavir (Lagevrio) locator</a><br/>
+                &#8729; <a href="/paxlovid" rel="noopener">Paxlovid locator</a> (consult <a href='https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/ritonavir-boosted-nirmatrelvir--paxlovid-/paxlovid-drug-drug-interactions/'>drug-drug interactions</a>)<br/>
+                &#8729; <a href="/bebtelovimab" rel="noopener">Bebtelovimab locator</a><br/> 
+                &#8729; <a href="/lagevrio" rel="noopener">Molnuripavir (Lagevrio) locator</a><br/>
                 &#8729; <a href="https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/remdesivir/" rel="noopener">Remdesivir for outpatients</a> (no locator available)<br/>
               </div>
             </div>

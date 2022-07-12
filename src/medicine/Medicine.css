@@ -1,0 +1,226 @@
+.Medicine {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tdAd a {
+  color: white;
+} 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.countyCity {
+  font-Size: 14pt
+}
+
+.b {
+  font-weight: bold;
+  margin-Top: 10px;
+}
+
+.lm10 {
+  margin-Left: 10px;
+}
+
+.providerTable {
+  margin-Left: 10px;
+  margin-Top: 30px;
+  margin-Bottom: 30px;
+  margin: 0 auto;
+  border-Collapse: collapse;
+}
+
+.healthDeptTable {
+  margin-Left: 10px;
+  margin-Top: 30px;
+  margin-Bottom: 30px;
+  margin: 0 auto;
+  border-Collapse: collapse;
+  width: 450px
+}
+
+.doseCount {
+  font-Size: 12pt;
+  vertical-Align: bottom;
+}
+
+.doseLabel {
+  vertical-Align: top;
+}
+
+.mediumFont {
+  font-Size: 14pt;
+}
+
+.smallerCentered {
+  font-Size: 10pt;
+  text-Align: center;
+}
+
+.smallerFont {
+  font-Size: 10pt;
+}
+
+.eightPointFont {
+  font-Size: 8pt;
+}
+
+.tinyFont {
+  font-Size: '5pt'
+}
+
+.chooseState {
+  font-Size: 18pt;
+}
+
+.mapDiv {
+  margin: 0 auto;
+  height: 250px;
+  width: 350px;
+}
+
+.centered {
+  text-Align: center;
+}
+
+.centeredOrange {
+  text-Align: center;
+  background: orange;
+}
+
+.centeredYellow {
+  text-Align: center;
+  background: yellow;
+}
+
+td {
+  max-Width: 100px;
+  vertical-Align: top;
+  word-Wrap: break-word;
+}
+
+.tdChart {
+  max-Width: 250px;
+  vertical-Align: top;
+  word-Wrap: break-word;
+}
+
+.tdProvider {
+  max-Width: 200px;
+  overflow: hidden;
+  text-Overflow: ellipsis;
+  vertical-Align: top;
+}
+
+/* table color theme started with primary color of #f1ec90 and used https://material.io/design/color/the-color-system.html#tools-for-picking-colors */
+.tdAd {
+  background-Color: #9095f1;
+}
+
+th {
+  position: sticky;
+  background-Color: #9095f1;
+  top: 0px;
+  z-Index: 2;
+  font-Size: 20px;
+}
+
+.odd {
+  background: white;
+}
+
+.even {
+  background: #f1ec90;
+}
+
+.stateInfo {
+  background-Color: #f1bb90;
+  text-Align: left;
+}
+
+.infoLabels {
+  background-Color: #f1bb90;
+  text-Align: right;
+  padding-Right: 10px;
+}
+
+.totals {
+  padding: 0 0;
+  background-Color: #f1bb90;
+}
+
+.textArea {
+  height: 300px;
+  width: 600px;
+  white-Space: pre-line;
+  background: lightyellow;
+}
+
+.hiddenRow {
+  visibility: collapse;
+}
+
+.rightTotals {
+  text-align: right;
+}
+
+.tdTotals {
+  width: 1in;
+  font-size: 9pt;
+}
