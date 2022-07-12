@@ -21,9 +21,8 @@ ReactDOM.render(
             <Route exact path='/vaccine-time' element={< VaccineTime />}></Route>
           <Route exact path='/immunocompromised' element={< App bookmark='immunocompromised'  />}></Route>
             <Route exact path='/evusheld' element={ <Medicine typeLower='evusheld' type='Evusheld' dosesInBox='24' />}></Route>
-            <Route exact path='/evusheld/guide' element={ <EvusheldGuide />}></Route>
 
-        <Route exact path='/protective-medicines' element={< App bookmark='protective-medicines'  />}></Route>
+        <Route exact path='/protective-measures' element={< App bookmark='protective-measures'  />}></Route>
           <Route exact path='/masks' element={< App bookmark='masks'  />}></Route>
           <Route exact path='/ventilation' element={< App bookmark='ventilation'  />}></Route>
           <Route exact path='/tests' element={< App bookmark='tests'  />}></Route>
