@@ -241,7 +241,7 @@ function NavigationHeader() {
   return zipFilter === null || providerFilter === null ?
     <>
       <div className='centered'>
-        <h3 className='breadcrumbbar'><a href='/'><img src="../logo192.png" alt='CovidSafe.fyi' height="96" width="96" /></a>&nbsp;&gt;&nbsp;{medicineLower !== 'evusheld' ? <a href='/have-covid'>have covid?</a> : <a href='immunocompromised'>immunocompromised</a> }&nbsp;&gt;&nbsp;<a href={'/'+ medicineLower + window.location.search}>{medicineLower}</a></h3>
+        <h3 className='breadcrumbbar'><a href='/'><img src="../logo192.png" alt='CovidSafe.fyi' height="96" width="96" /></a>&nbsp;&gt;&nbsp;{medicineLower !== 'evusheld' ? <a href='/#have-covid'>have covid?</a> : <a href='/#immunocompromised'>immunocompromised</a> }&nbsp;&gt;&nbsp;<a href={'/'+ medicineLower + window.location.search}>{medicineLower}</a></h3>
         <label className='chooseState' htmlFor='chooseState'>
           <select className='mediumFont' defaultValue={medicineLower} onChange={(e) => handleDrugChange(e)}> 
             <option value='evusheld'>Evusheld</option>
