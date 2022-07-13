@@ -166,6 +166,12 @@ td {
   word-Wrap: break-word;
 }
 
+.breadCrumbBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tdChart {
   max-Width: 250px;
   vertical-Align: top;
