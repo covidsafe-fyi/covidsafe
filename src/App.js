@@ -14,8 +14,10 @@ function App() {
         <div className="location-toolkit-wrap">
           <div className="toolkit">
             <div className="toolkit__wrap">
+              <div class='breadcrumbbar'>
+                  <a href='/'><img className="center" src="logo192.png" alt='CovidSafe.fyi' height="96" width="96" /></a>
+              </div>
               <div className="toolkit__intro">
-                <a href='/'><img className="center" src="logo192.png" alt='CovidSafe.fyi' height="96" width="96" /></a>
                 <p>Resources to keep yourself and others safe from COVID-⁠19.</p>
                 <p>Curated content from government and other trusted sites.</p>
                 <p>
