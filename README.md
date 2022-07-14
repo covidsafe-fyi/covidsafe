@@ -3,6 +3,9 @@
 [CovidSafe.fyi](https://CovidSafe.fyi) - Resources to keep yourself and others safe from COVID-⁠19. (Info from covid.gov, reorganized, and supplemented.)
 
 
+## Repo with Therapeutic Data from Governement
+
+[rrelyea/covid-therapeutics](https://github.com/rrelyea/covid-therapeutics) runs github actions and downloads/processes data from healthdata.gov
 
 
 
