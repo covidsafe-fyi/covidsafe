@@ -24,6 +24,7 @@ var currentState = null;
 var medicine = null;
 var medicineLower = null;
 var dosesInBox = null;
+var status = null;
 
 function toTitleCase(str) {
   return str.toLowerCase().split(' ').map(function (word) {
@@ -180,12 +181,20 @@ function renderPage() {
         <MedicineNavigator />
         <Footer />
       </div>
-    </div>
+    </div>;
+
+  if (status != null) {
+    page = <div>
+            <NavigationHeader status={status} />
+            <MedicineNavigator />
+            <Footer />
+           </div>;
+  }
     
   ReactDOM.render(page, document.getElementById('root'));
 }
 
-function NavigationHeader() {
+function NavigationHeader(props) {
   const mapClick = (e) => {
     var element = e.target;
     var state_code = null;
@@ -249,6 +258,7 @@ function NavigationHeader() {
             <option value='paxlovid'>Paxlovid</option>
             <option value='bebtelovimab'>Bebtelovimab</option>
             <option value='lagevrio'>Molnupiravir</option>
+            {medicineLower === 'sotrovimab' ? <option value='sotrovimab'>Sotrovimab</option> : false }
           </select>
           { medicineLower === "lagevrio" ? " (Lagevrio) " : " "}
            providers in:
@@ -264,9 +274,10 @@ function NavigationHeader() {
       { cityFilter !== null ? <div className='centered'>City: {toTitleCase(cityFilter)} <a href={linkToState}>(clear)</a> </div> : false }
       { providerFilter !== null ? <div className='centered'>Provider contains '{providerFilter}' <a href={linkToState}>(clear)</a> </div> : false }
       { zipFilter !== null ? <div className='centered'>Zip Code: {zipFilter} </div> : false }
-      <div onClick={mapClick} className='mapDiv'>
+      { status == null ? <div onClick={mapClick} className='mapDiv'>
         <MapChart id='mapChart' />
       </div>
+      : <><div>&nbsp;</div><h2 className='centered'>{status}</h2></>}
       { medicineLower === "evusheld" ? <div className='centered'>Use: <a href='/evusheld/guide/'>Evusheld Guide</a> for tips and info to get Evusheld<br/></div> : false }
     </>
   : false;
@@ -665,6 +676,7 @@ function Medicine(props) {
   medicine = props.type;
   medicineLower = props.typeLower;
   dosesInBox = props.dosesInBox;
+  status = props.status;
 
   loadData();
   return (
