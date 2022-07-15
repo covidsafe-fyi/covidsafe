@@ -2,9 +2,9 @@
 
 <head>
     <style>
-        img { margin: 30 10 30 0;
+        .screenshots { margin: 30 10 30 0;
               width: 80%;
-             }
+        }
         p, li {
             font-size: 16pt;
         }
@@ -17,11 +17,16 @@
         h3 {
             font-size: 20pt;
         }
+        .breadCrumbBar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         
         @media (min-width: 768px) {
-            img { margin: 30 110 0 110;
+            .screenshots { margin: 30 110 0 110;
                 width: 80%;
-             }
+            }
             p, li {
                 margin: 0 90 30 90;
                 font-size: 18pt;
@@ -42,9 +47,9 @@
         }
 
         @media (min-width: 1024px) {
-            img { margin: 30 210 0 210;
-                width: 8%;
-             }
+            .screenshots { margin: 30 210 0 210;
+                width: 80%;
+            }
             p, li {
                 margin: 0 190 30 190;
                 font-size: 20pt;
@@ -62,6 +67,7 @@
                 font-size: 24pt;
             }
         }
+
     </style>
 
     <title>Evusheld Guide</title>
@@ -79,7 +85,7 @@
 <body>
     <div style='overflow-x:hidden'>
 
-        <p style="text-align: center;"><a href="https://rrelyea.github.io/covid-safe" target="_blank" rel="noopener"><strong><em>covid-safe</em></strong></a><strong><em> &gt; </em></strong><a href="https://rrelyea.github.io/covid-safe/#immunocompromised" target="_blank" rel="noopener"><strong><em>immunocompromised</em></strong></a><strong><em> &gt; </em></strong><a href="https://rrelyea.github.io/evusheld/guide" target="_blank" rel="noopener"><strong><em>evusheld guide</em></strong></a></p>
+        <p class="breadCrumbBar" style="text-align: center;"><img src="../../logo192.png" alt='CovidSafe.fyi'  height="96" width="96" /></a>&nbsp;&gt;&nbsp;<a href="/#immunocompromised" target="_blank" rel="noopener"><strong><em>immunocompromised</em></strong></a><strong><em>&nbsp;&gt;&nbsp;</em></strong><a href="https://CovidSafe.fyi/evusheld/guide" target="_blank" rel="noopener"><strong><em>evusheld guide</em></strong></a></p>
         <h1 style="text-align: center;">Evusheld Guide</h1>
         <p style="text-align: center;"><span style="color: #666666;"><em>Tips and information to help immunocompromised get the covid protection they need.</em></span></p>
         <h2>About This Guide</h2>
@@ -318,11 +324,11 @@
         <p><em>To start, go to the main page of this site</em>:&nbsp; <a href="https://rrelyea.github.io/evusheld" target="_blank" rel="noopener">https://rrelyea.github.io/evusheld</a><em>. To see info for your state, click on the bar at the top of the page that says &lt;state&gt;. </em>A list of all the states will appear, and you can select yours. Or, you can click on your state in the US map on the main page.</p>
         <p><em>Here&rsquo;s the information you&rsquo;ll see at the top of the page after you pick your state. We picked New Jersey for our example.</em></p>
           
-            <img src="images/image2.png" />
+            <img class="screenshots" src="images/image2.png" />
             
             <p><em>If you click on one provider you get taken to more information about it.</em></p>
             
-            <img src="images/image1.png" />
+            <img class="screenshots" src="images/image1.png" />
             
         <p>You can see from the graph that Hackensack U Medical Center got a shipment of 200+ doses of Evusheld on 2/15 and another 60 or so on 2/22. Their inventory dropped over the next couple weeks, then on 3/8 they restocked. If you want to see how much they had on one particular day, hover the cursor over the graph at any point. Above, we hovered it over&nbsp; the graph on 3/31.</p>
         <p>In the future, we hope to be able to give you a clickable link to the website of each provider, and also a phone number. Unless that info appears on the page, though, you will have to google Hackensack U Medical Center yourself to get the information.</p>
