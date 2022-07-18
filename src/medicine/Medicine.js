@@ -58,6 +58,26 @@ function SwapKeyword(url, keyword) {
   return url.replace("KEYWORD", keyword)
 }
 
+function ShortenCounty(county) {
+  if (county != null) {
+    if (county.endsWith(" BOROUGH")) {
+      county = county.substring(0,county.length-8);
+      console.log("["+county+"]");
+    } else if (county.endsWith(" PARISH")) {
+      county = county.substring(0,county.length-7);
+      console.log("["+county+"]");    
+    } else if (county.endsWith(" MUNICIPALITY")) {
+        county = county.substring(0,county.length-13);
+        console.log("["+county+"]");
+    } else if (county.endsWith(" CENSUS AREA")) {
+    county = county.substring(0,county.length-12);
+    console.log("["+county+"]");
+    }
+  }
+
+  return county;
+}
+
 function navigateTo(state, county) {
   const params = new URLSearchParams(window.location.search);
   if (state !== "USA" && state !== "" && state !== null) { 
@@ -95,7 +115,7 @@ function renderPage() {
   var urlParams = new URLSearchParams(window.location.search);
 
   stateFilter = urlParams.has('state') ? urlParams.get('state').toUpperCase() : null;
-  countyFilter = urlParams.has('county') ? urlParams.get('county').toUpperCase() : null;
+  countyFilter = urlParams.has('county') ? ShortenCounty(urlParams.get('county').toUpperCase()) : null;
   if (stateFilter !== "USA" && countyFilter !== null) {
     adjacentCounties = null;
     Papa.parse(baseUri + "data/counties/adjacency/"+stateFilter+"/"+countyFilter.toLowerCase()+".csv", {
@@ -143,7 +163,7 @@ function renderPage() {
             option.value = item[0].toUpperCase();
             option.innerText = item[0];
             chooseCounty.appendChild(option);
-            if (countyFilter !== null && item[0].toUpperCase() === countyFilter.toUpperCase()) {
+            if (countyFilter !== null && ShortenCounty(item[0].toUpperCase()) === countyFilter.toUpperCase()) {
               chooseCounty.value = item[0].toUpperCase();
             }
           }
