@@ -78,7 +78,7 @@ function ShortenCounty(county) {
   return county;
 }
 
-function navigateTo(state, county) {
+function navigateTo(state, county, city, zip) {
   const params = new URLSearchParams(window.location.search);
   if (state !== "USA" && state !== "" && state !== null) { 
     params.set('state', state);
@@ -93,8 +93,18 @@ function navigateTo(state, county) {
     params.delete('county');
   }
   
-  if (params.has('city')) params.delete('city');
-  if (params.has('zip')) params.delete('zip');
+  if (city !== "< city >" && city != null) {
+    params.set('city', city);
+  } else if (params.has('city')) {
+    params.delete('city');
+  }
+
+  if (zip !== "< zip >" && zip != null) {
+    params.set('zip', zip);
+  } else if (params.has('zip')) {
+    params.delete('zip');
+  }
+
   if (params.has('provider')) params.delete('provider');
 
   var paramsString = params.toString();
@@ -214,6 +224,14 @@ function renderPage() {
   ReactDOM.render(page, document.getElementById('root'));
 }
 
+const handleCityChange = (e) => {
+  navigateTo(stateFilter, countyFilter, e.target.value, zipFilter);
+}
+
+const handleZipChange = (e) => {
+  navigateTo(stateFilter, countyFilter, cityFilter, e.target.value);
+}
+
 function NavigationHeader(props) {
   const mapClick = (e) => {
     var element = e.target;
@@ -239,11 +257,11 @@ function NavigationHeader(props) {
 
       if (state_code !== null) {
         chooseState.value = state_code;
-        navigateTo(state_code, null);  
+        navigateTo(state_code, null, null, null);  
       }
       else
       {
-        navigateTo("USA", null);
+        navigateTo("USA", null, null, null);
       }
     }
   }
@@ -259,11 +277,11 @@ function NavigationHeader(props) {
   }
 
   const handleStateChange = (e) => {
-    navigateTo(e.target.value, null);
+    navigateTo(e.target.value, null, null, null);
   }
 
   const handleCountyChange = (e) => {
-    navigateTo(stateFilter, e.target.value);
+    navigateTo(stateFilter, e.target.value, null, null);
   }
 
   var linkToState = stateFilter !== "USA" ? "?state=" + stateFilter : window.location.pathname.split("?")[0];
@@ -293,7 +311,7 @@ function NavigationHeader(props) {
       </div>
       { cityFilter !== null ? <div className='centered'>City: {toTitleCase(cityFilter)} <a href={linkToState}>(clear)</a> </div> : false }
       { providerFilter !== null ? <div className='centered'>Provider contains '{providerFilter}' <a href={linkToState}>(clear)</a> </div> : false }
-      { zipFilter !== null ? <div className='centered'>Zip Code: {zipFilter} </div> : false }
+      { zipFilter !== null ? <div className='centered'>Zip Code: {zipFilter} <a href={linkToState}>(clear)</a></div> : false }
       { status == null ? <div onClick={mapClick} className='mapDiv'>
         <MapChart id='mapChart' />
       </div>
@@ -340,6 +358,9 @@ function NationalDetails() {
 function GetNationalDetails(states, providers) {
   var providerLists = [];
   var totalsCollection = null;
+  var cityList = null;
+  var zipList = null;
+
   currentState = null;
   for (var index = 0; index < states.length; index++) {
     var state = states[index];
@@ -348,6 +369,9 @@ function GetNationalDetails(states, providers) {
       var header = results[0];
       var totals = results[1];
       var providersResults = results[2];
+      cityList = results[3];
+      zipList = results[4];
+
       if (header !== null) { currentState = state; }
       if (totals !== null) { totalsCollection = totals; }
       if (providersResults !== null) { 
@@ -399,6 +423,25 @@ function GetNationalDetails(states, providers) {
 
   return (healthDeptTable != null || Providers != null ?
       <>
+        { totals.providerCount > 0 ? 
+        <div className='centered'>
+          Filter providers by - &nbsp;
+          <label>City:</label>&nbsp;
+          <select onChange={(e) => handleCityChange(e)}>
+              <option>&lt; city &gt;</option>
+            { cityList != null ? cityList.map((city, index) => {
+              return <option>{city}</option>
+            }) : false }
+          </select>
+
+          &nbsp;<label>Zip Code:</label>&nbsp;
+          <select onChange={(e) => handleZipChange(e)}>
+          <option>&lt; zip &gt;</option>
+            { zipList != null ? zipList.map((zip, index) => {
+              return <option>{zip}</option>
+            }) : false }
+          </select>        
+        </div> : false }
         {healthDeptTable}
         <div className='smallerCentered'>&nbsp;</div>
         <table className='providerTable'>
@@ -449,6 +492,9 @@ function GetStateDetails(state, index, providers) {
   && (cityFilter === null || cityFilter === provider[3].toUpperCase()))
         );
 
+  var cityList = new Set();
+  var zipList = new Set();
+
   var providerList = filteredProviders.map((provider, index) => {
     // ignore blank lines in provider file
     if (provider.length === 1) 
@@ -458,13 +504,16 @@ function GetStateDetails(state, index, providers) {
 
     var county = provider[4];
     var city = provider[3];
+    var zipCode = provider[6].substring(0,5);
+
+    cityList.add(city);
+    zipList.add(zipCode);
 
     var provider_x = toTitleCase(provider[0].replaceAll('-',' '));
     if (providerFilter === null || provider_x.includes(providerFilter)) {
       // use encodeURIComponent for "#"
       var linkToProvider = "?provider=" + encodeURIComponent(provider_x.replaceAll(' ', '-')) + "&zip=" + provider[6].substring(0,5);
       var linkToState = "?state=" + state_code;
-      var zipCode = provider[6].substring(0,5);
       var linkToCounty = linkToState + "&county=" + county;
       var linkToCity = linkToState + "&city=" + city;
       var firstRowOfCity = lastCity !== toTitleCase(city) || lastCounty !== county || lastState !== state_code;
@@ -591,7 +640,7 @@ function GetStateDetails(state, index, providers) {
 
   if (header != null || (totals != null && totals.providerCount !== 0) || providerList.length !== 0) {
       providerList.push(supportAd); // place support ad to tail end of providers
-    return [header, totals, providerList];
+    return [header, totals, providerList, Array.from(cityList).sort(), Array.from(zipList).sort()];
   } else {
     return false;
   }
