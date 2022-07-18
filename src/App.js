@@ -39,9 +39,11 @@ function App() {
                       <span>Vaccines</span>
                     </h3>
                     <p>Being <i>"up to date"</i> with your COVID-19 vaccines is the best way to protect against severe illness and hospitalization from COVID-&#8288;19.</p>
-                    &#8729; <a href="/vaccine-time" rel="noopener">Vaccine-Time: when should you (or all your loved ones) schedule your next vaccine for?</a><br/>
-                    &#8729; <a href="https://vaccines.gov/search" rel="noopener">Find a vaccine or booster at vaccines.gov</a>
                     <p>CDC At-a-Glance schedule:</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/downloads/COVID-19-vacc-schedule-at-a-glance-508.pdf"><img src={vaccineSchedule} alt="CDC's At-a-Glance Vaccination Schedules Document" /></a></p>
+                    <p>Customized Schedule for You/Loved Ones:</p>
+                    &#8729; <a href="/vaccine-time" rel="noopener">Vaccine-Time: when should you (&amp; loved ones) schedule your next vaccine for?</a><br/>
+                    <p>Schdedule a Vaccine/Booster:</p>
+                    &#8729; <a href="https://vaccines.gov/search" rel="noopener">Find a vaccine or booster at Vaccines.gov</a>
                     <p>Latest Clinical Guidance for Covid Vaccinations:</p>
                     &#8729; <a href="https://www.cdc.gov/vaccines/covid-19/clinical-considerations/interim-considerations-us.html">CDC Guidance for Vaccinations</a>
                   </div>
@@ -58,21 +60,23 @@ function App() {
                       </div>
                       <span>More Protection for the Immunocompromised</span>
                     </h3>
+                    <p>The latest guidance from cdc.gov for those who are immunocompromised, including where to get preventative treatment (Evusheld):</p>
+                    &#8729; <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html#immunocompromised" rel="noopener">CDC guidance for immunocompromised</a>
                     <p>
-                      Evusheld is a preventive medicine that immunocompromised, in consultation with their doctors, should consider to get extra needed protection.
+                      Evusheld:
                     </p>
-                  &#8729; <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html#immunocompromised" rel="noopener">CDC guidance for immunocompromised</a>
-                  <p>
+                    &#8729; a preventive medicine that immunocompromised, in consultation with their doctors, should consider to get extra needed protection.
+                    <p>
                       Evusheld News: 6/29/2022: FDA authorizes Evusheld doses every 6 months.
                     </p>
-                  &#8729; <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-authorizes-revisions-evusheld-dosing" rel="noopener">Evusheld dose should be repeated every 6 months (fda.gov)</a>
+                    &#8729; <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-authorizes-revisions-evusheld-dosing" rel="noopener">Evusheld dose should be repeated every 6 months (fda.gov)</a>
 
-                  <p>If you are moderately to severely immunocompromised, for many finding Evusheld isn't as easy as it should be.</p>
-                  &#8729; <a href="/evusheld" rel="noopener">Evusheld locator</a>
-
-                  <p>Tips and trick to get Evusheld if you are qualified</p>
-                  &#8729; <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
-                  
+                    <p>Evusheld Guide:</p>
+                    &#8729; Tips and trick to get Evusheld if you are qualified with <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
+                    
+                    <p>Evusheld locator:</p>
+                    &#8729; <a href="/evusheld" rel="noopener">Evusheld Locator at CovidSafe.fyi/evusheld</a>
+                    
                   </div>
                 </div>
               </div>
