@@ -16,8 +16,8 @@ function App() {
             <div className="toolkit__wrap">
               <div className="toolkit__intro">
                 <a href='/'><img className="center" src="logo192.png" alt='CovidSafe.fyi' height="96" width="96" /></a>
-                <p>Resources to keep yourself and others safe from COVID-⁠19.</p>
-                <p>Curated content from government and other trusted sites.</p>
+                <h2>Resources to keep yourself and others safe from COVID-⁠19.</h2>
+                <p><i>Curated content from government and other trusted sites.</i></p>
                 <p>
                   <b><a href='#preventive-medicines'>Preventive Medicines</a>:</b> <a href="#vaccines">Vaccines</a>, <a href="#immunocompromised">For Immunocompromised</a><br/>
                   <b><a href='#protective-measures'>Protective Measures</a>:</b> <a href="#masks">Masks</a>, <a href="#ventilation">Air Ventilation</a>, <a href="#tests">Tests</a><br/>
@@ -208,8 +208,8 @@ function App() {
         </div>
       </main>
       
-      Contact: <a href="https://linktr.ee/rrelyea">Rob Relyea</a><br/>
-      Open Source: <a href="https://github.com/covidsafe-fyi/covidsafe">github.com/covidsafe-fyi/covidsafe</a><br/>
+      <b>Contact info:</b> <a href="https://linktr.ee/rrelyea">linktr.ee/rrelyea</a><br/>
+      <b>Open Source at github:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">covidsafe-fyi/covidsafe</a> and <a href="https://github.com/rrelyea/covid-therapeutics">rrelyea/covid-therapeutics</a><br/>
       <br/>
     </div>
   );
