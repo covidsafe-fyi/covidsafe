@@ -209,7 +209,7 @@ function App() {
       </main>
       
       <b>Contact info:</b> <a href="https://linktr.ee/rrelyea">linktr.ee/rrelyea</a><br/>
-      <b>Open Source at github:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">covidsafe-fyi/covidsafe</a> and <a href="https://github.com/rrelyea/covid-therapeutics">rrelyea/covid-therapeutics</a><br/>
+      <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a><br/>
       <br/>
     </div>
   );

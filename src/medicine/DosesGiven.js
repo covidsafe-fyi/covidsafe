@@ -121,7 +121,7 @@ class DosesGiven extends React.Component {
 
               { this.props.medicine === "Evusheld" ?
               <>
-                <div className='b'>Immunocompromised</div>
+                <div className='b'>Immunocompromised ({this.props.stateCode})</div>
                 <div>- Adults: ~{this.state.stateDosesGiven !== null ? (Number(totals.icAdults).toLocaleString('en-US')) : 0}</div>
                 <div>- % Protected: {this.state.stateDosesGiven !== null ? (Number(this.state.stateDosesGiven)/ Number(totals.icAdults) * 100).toFixed(1) + "%" : 0}</div>
               </>
