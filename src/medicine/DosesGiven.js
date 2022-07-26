@@ -71,7 +71,7 @@ class DosesGiven extends React.Component {
 
     getData() {
       if (this.state.stateOrTerritory !== this.props.stateCode || (this.props.dosesGivenPerWeek != null && this.state.stateDosesGiven == null)) {
-        this.state.stateOrTerritory = this.props.stateCode;
+        this.setState({stateOrTerritory:this.props.stateCode});
         var dosesPerWeek = null;
         var stateDosesGiven = null;
         for (var i = 0; i < this.props.dosesGivenPerWeek.length; i++) {
