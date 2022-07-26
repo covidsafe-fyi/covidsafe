@@ -17,6 +17,7 @@ class DosesGiven extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            stateOrTerritory: null,
             dosesAdministeredTotal: 0,
             firstAdminDate: null,
             mounted: false,
@@ -69,7 +70,8 @@ class DosesGiven extends React.Component {
     }
 
     getData() {
-      if (this.props.dosesGivenPerWeek != null && this.state.stateDosesGiven == null) {
+      if (this.state.stateOrTerritory !== this.props.stateCode || (this.props.dosesGivenPerWeek != null && this.state.stateDosesGiven == null)) {
+        this.state.stateOrTerritory = this.props.stateCode;
         var dosesPerWeek = null;
         var stateDosesGiven = null;
         for (var i = 0; i < this.props.dosesGivenPerWeek.length; i++) {
