@@ -3,7 +3,8 @@ const { v1: uuidv1} = require('uuid');
 require('dotenv').config()
 
 function getSecret() {
-    return "Some Secret";
+    const connection_string = process.env.STORAGE_CONNECTION_STRING;
+    return connection_string;
 }
 
 module.exports = async function (context, req) {
