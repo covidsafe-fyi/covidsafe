@@ -67,14 +67,19 @@ function App() {
                     </p>
                     &#8729; a preventive medicine that immunocompromised, in consultation with their doctors, should consider to get extra needed protection.
                     <p>
-                      Evusheld News: 6/29/2022: FDA authorizes Evusheld doses every 6 months.
+                      Evusheld News:
                     </p>
-                    &#8729; <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-authorizes-revisions-evusheld-dosing" rel="noopener">Evusheld dose should be repeated every 6 months (fda.gov)</a>
+                    &#8729; <span><a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-authorizes-revisions-evusheld-dosing" rel="noopener">6/2022: FDA authorizes Evusheld doses every 6 months (since last 150/150 dose)</a> (fda.gov)</span><br/>
+                    &#8729; <span><a href="https://www.fda.gov/emergency-preparedness-and-response/mcm-legal-regulatory-and-policy-framework/expiration-dating-extension#COVIDtherapeutics" rel="noopener">6/2022: Evusheld expiration dates adjusted, adding 6 months</a> (fda.gov)</span><br/>
+                    &#8729; <span><a href="https://aspr.hhs.gov/COVID-19/Therapeutics/updates/Pages/important-update-27July2022.aspx" rel="noopener">7/2022: Doctors can now order an Evusheld dose with a simple web form</a> (hhs.gov)</span>
 
                     <p>Evusheld Guide:</p>
                     &#8729; Tips and trick to get Evusheld if you are qualified with <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
-                    
-                    <p>Evusheld locator:</p>
+
+                    <p>Evusheld Order Form (for Doctors):</p>
+                    &#8729; HHS.gov provides a new, simpler way for a doctor to get Evusheld for patients: <a href="/evusheld/order" rel="noopener">Order Evusheld Dose</a>
+
+                    <p>Evusheld Provider List (by State/County):</p>
                     &#8729; <a href="/evusheld" rel="noopener">Evusheld Locator at CovidSafe.fyi/evusheld</a>
                     
                   </div>
@@ -209,7 +214,7 @@ function App() {
       </main>
       
       <b>Contact info:</b> <a href="https://linktr.ee/rrelyea">linktr.ee/rrelyea</a><br/>
-      <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a><br/>
+      <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">/covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a><br/>
       <br/>
     </div>
   );
