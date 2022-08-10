@@ -544,14 +544,12 @@ function GetStateDetails(state, index, providers) {
       providerCountTotals += 1;
 
       var reportDateColNum = dataDate !== null ? 13 : 12;
-      var testToTreatSection = null;
-      if (testToTreatData !== null) {
-        testToTreatSection = <>
-          {testToTreatData[7] !== "" || testToTreat[8] !== null ? 
-          <div>TestToTreat <a href={testToTreatData[7]}>link</a> <span>{testToTreatData[8]}</span>
-          </div> : false }
-        </>
-      }
+      var testToTreatSection = <>
+          {testToTreatData != null && (testToTreatData[7] !== null || testToTreatData[8] !== null) ? 
+          <div><a href={testToTreatData[7]}>Book appointment at {provider_x}</a> <span>{testToTreatData[8]}</span>
+          </div> : (medicineLower !== 'evusheld'?<div>Prescription needed. Talk to your doctor or a <a href="https://findahealthcenter.hrsa.gov/">health center</a>.</div>:false)
+          }
+        </>;
       
       var placeSupportAd = Math.floor(Math.random() * 33) === 0;
 
