@@ -332,7 +332,7 @@ function ProviderHeader() {
 function HarvestInfo() {
   return (stateFilter !== "USA" || zipFilter !== null || providerFilter !== null || cityFilter != null || countyFilter !== null) ?
   <div className='smallerCentered'>
-    [<a href={baseUri + "data/therapeutics/"+medicineLower+"/"+medicineLower+"-providers.csv"}>Data</a> harvested from <a href="https://healthdata.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8">healthdata.gov</a>, which last updated: {dataUpdated}. Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://paypal.me/RobRelyea'>paypal</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
+    [<a href={baseUri + "data/therapeutics/"+medicineLower+"/"+medicineLower+"-providers.csv"}>Data</a> harvested from <a href="https://healthdata.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8">healthdata.gov</a>, which last updated: {dataUpdated}. Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
   </div>
   : false;
 }
@@ -464,7 +464,7 @@ function GetNationalDetails(states, providers) {
 const supportAd = <tr>
   <td className='tdAd' colSpan='2'><b>SUPPORT</b>: Please enable <a href='https://www.geekwire.com/2022/after-wife-got-cancer-microsoft-engineer-built-a-tool-to-locate-anti-covid-drug-for-immunocompromised/'>me</a> to provide this helpful info to you (ad free) by giving a small donation:</td>
   <td className='tdAd'>
-  <b>Sponsor via</b> <a href='https://buymeacoffee.com/rrelyea'>buymeacoffee.com</a>, <a href='https://paypal.me/RobRelyea'>paypal</a>, or <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>
+  <b>Sponsor via</b> <a href='https://buymeacoffee.com/rrelyea'>buymeacoffee.com</a> or <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>
   </td>
   </tr>;
 
@@ -659,7 +659,7 @@ function Footer() {
   return <>
     <div className='smallerFont'>&nbsp;</div>
     <div className='smallerCentered'>
-      <b>Why I built this site:</b> <a href='https://www.geekwire.com/2022/after-wife-got-cancer-microsoft-engineer-built-a-tool-to-locate-anti-covid-drug-for-immunocompromised/'>geekwire</a>, <a href='https://cnn.com/2022/04/13/opinions/evusheld-immunocompromised-covid-19-equity-relyea/index.html'>CNN op-ed</a> <b>Contact Info:</b> <a href='https://twitter.com/rrelyea'>twitter</a>, <a href='https://linktr.ee/rrelyea'>email/more</a> <b>Sponsor site:</b> <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://paypal.me/RobRelyea'>paypal</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a> <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">/covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a>
+      <b>Why I built this site:</b> <a href='https://www.geekwire.com/2022/after-wife-got-cancer-microsoft-engineer-built-a-tool-to-locate-anti-covid-drug-for-immunocompromised/'>geekwire</a>, <a href='https://cnn.com/2022/04/13/opinions/evusheld-immunocompromised-covid-19-equity-relyea/index.html'>CNN op-ed</a> <b>Contact Info:</b> <a href='https://twitter.com/rrelyea'>twitter</a>, <a href='https://linktr.ee/rrelyea'>email/more</a> <b>Sponsor site:</b> <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a> <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">/covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a>
     </div>
     <div className='smallerCentered'>&nbsp;</div>
   </>;
