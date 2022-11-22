@@ -186,7 +186,9 @@ function App() {
                     &#8729; <a href="/paxlovid" rel="noopener">Paxlovid locator</a> (consult <a href='https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/ritonavir-boosted-nirmatrelvir--paxlovid-/paxlovid-drug-drug-interactions/'>drug-drug interactions</a>)<br/>
                     &#8729; <a href="/bebtelovimab" rel="noopener">Bebtelovimab locator</a><br/> 
                     &#8729; <a href="/lagevrio" rel="noopener">Molnuripavir (Lagevrio) locator</a><br/>
-                    &#8729; <a href="https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/remdesivir/" rel="noopener">Remdesivir for outpatients</a> (no locator available)<br/>
+                    <p>Remdesivir</p>
+                    &#8729; <a href="/remdesivir" rel="noopener">Remdesivir (outpatient) locator</a><br/>
+                    &#8729; <a href="https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/remdesivir/" rel="noopener">Remdesivir info (nih.gov)</a><br/>
                   </div>
                 </div>
 

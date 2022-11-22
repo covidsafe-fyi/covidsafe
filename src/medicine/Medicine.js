@@ -25,6 +25,7 @@ var medicine = null;
 var medicineLower = null;
 var dosesInBox = null;
 var status = null;
+var locationsOnly = null;
 
 function toTitleCase(str) {
   return str.toLowerCase().split(' ').map(function (word) {
@@ -113,7 +114,7 @@ function navigateTo(state, county, city, zip) {
 }
 
 function renderPage() {
-  if (states === null || mabSites === null || testToTreat === null || dosesGivenPerWeek === null) {
+  if (states === null || mabSites === null || testToTreat === null || (dosesGivenPerWeek === null && locationsOnly !== "true")) {
     return;
   }
 
@@ -270,7 +271,7 @@ function NavigationHeader(props) {
     if (e.target.value === "covid-safe") {
       document.location = "/";
     } else if (e.target.value === "trials") {
-      document.location = "https://rrelyea.github.io/trials/?qs=Pfizer%20Vaccine:BNT162b2,Moderna%20Vaccine:mRNA-1273,Evusheld:AZD7442,Long-Covid,Paxlovid:nirmatrelvir%20ritonavir,Bebtelovimab,molnupiravir";
+      document.location = "https://rrelyea.github.io/trials/?qs=Pfizer%20Vaccine:BNT162b2,Moderna%20Vaccine:mRNA-1273,Evusheld:AZD7442,Long-Covid,Paxlovid:nirmatrelvir%20ritonavir,Bebtelovimab,molnupiravir,remdesivir";
     } else {
       document.location = '/'+ e.target.value + window.location.search;
     }
@@ -296,6 +297,7 @@ function NavigationHeader(props) {
             <option value='paxlovid'>Paxlovid</option>
             <option value='bebtelovimab'>Bebtelovimab</option>
             <option value='lagevrio'>Molnupiravir</option>
+            <option value='remdesivir'>Remdesivir</option>
             {medicineLower === 'sotrovimab' ? <option value='sotrovimab'>Sotrovimab</option> : false }
           </select>
           { medicineLower === "lagevrio" ? " (Lagevrio) " : " "}
@@ -332,7 +334,12 @@ function ProviderHeader() {
 function HarvestInfo() {
   return (stateFilter !== "USA" || zipFilter !== null || providerFilter !== null || cityFilter != null || countyFilter !== null) ?
   <div className='smallerCentered'>
-    [<a href={baseUri + "data/therapeutics/"+medicineLower+"/"+medicineLower+"-providers.csv"}>Data</a> harvested from <a href="https://healthdata.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8">healthdata.gov</a>, which last updated: {dataUpdated}. Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
+    [
+      { locationsOnly !== "true" ?
+        <><a href={baseUri + "data/therapeutics/"+medicineLower+"/"+medicineLower+"-providers.csv"}>Data</a> harvested from <a href="https://healthdata.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8">healthdata.gov</a>, which last updated: {dataUpdated}.</>
+        : <><span>{medicine} data manually tracked. Please email <a href="mailto:remdesivir-data@relyeas.net">remdesivir-data@relyeas.net</a> with additions/corrections.</span>&nbsp;</>
+      }
+      Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
   </div>
   : false;
 }
@@ -400,14 +407,19 @@ function GetNationalDetails(states, providers) {
               <>
                 <div className='b'>{totalsCollection.totalType}</div>
                 <div> - Providers: {Number(totalsCollection.providerCount).toLocaleString('en-US')}</div>
-                <div> - Available Doses: {Number(totalsCollection.availableTotal).toLocaleString('en-US')}</div>
-                {medicineLower!=="evusheld" && totalsCollection.show100kStats ? <div className='lm10'> - per 100k: {Number(totalsCollection.availableTotal/totalsCollection.pop100Ks).toFixed(0).toLocaleString('en-US')}</div> : false }
+                { locationsOnly !== "true" ?
+                  <div> - Available Doses: {Number(totalsCollection.availableTotal).toLocaleString('en-US')}</div>
+                  : false
+                }
+                {locationsOnly !== "true" && medicineLower!=="evusheld" && totalsCollection.show100kStats ? <div className='lm10'> - per 100k: {Number(totalsCollection.availableTotal/totalsCollection.pop100Ks).toFixed(0).toLocaleString('en-US')}</div> : false }
                 <NeighboringCounties />
                 <div>&nbsp;</div>
               </> : false }
             </td>
             <td>
+              { locationsOnly !== "true" ?
               <DosesGiven medicine={medicine} stateCode={currentState[3]} dosesGivenPerWeek={dosesGivenPerWeek} totals={totals} />
+              : false }
             </td>
             </tr>
           </tbody>
@@ -416,6 +428,8 @@ function GetNationalDetails(states, providers) {
   if (totals !== null && totals.providerCount === 0) {
     if (currentState != null && currentState[3] === "USA") {
       Providers = [<tr><td colSpan='3'>Choose a State to see Providers</td></tr>];
+    } else if (locationsOnly === "true") {
+      Providers = [<tr><td colSpan='3'>No Providers Currently Known in this Location. Please email <a style={{whiteSpace:'nowrap'}} href="mailto:remdesivir-data@relyeas.net">remdesivir-data@relyeas.net</a> with additions.</td></tr>];
     } else {
       Providers = [<tr><td colSpan='3'>No Providers Found in this Location</td></tr>];
     }
@@ -450,7 +464,9 @@ function GetNationalDetails(states, providers) {
             <tr key='header'>
               <th>&nbsp;State - County - City&nbsp;</th>
               <th>Provider</th>
+              { locationsOnly !== "true" ?
               <th>Doses</th>
+              : false }
             </tr>
           </thead> : false }
           <tbody>
@@ -547,7 +563,7 @@ function GetStateDetails(state, index, providers) {
       var testToTreatSection = <>
           {testToTreatData != null && (testToTreatData[7] !== null || testToTreatData[8] !== null) ? 
           <div><a href={testToTreatData[7]}>Book appointment at {provider_x}</a> <span>{testToTreatData[8]}</span>
-          </div> : (medicineLower !== 'evusheld'?<div>Prescription needed. Talk to your doctor or a <a href="https://findahealthcenter.hrsa.gov/">health center</a>.</div>:false)
+          </div> : (medicineLower !== 'evusheld' && medicineLower !== 'remdesivir' ?<div>Prescription needed. Talk to your doctor or a <a href="https://findahealthcenter.hrsa.gov/">health center</a>.</div>:false)
           }
         </>;
       
@@ -571,23 +587,26 @@ function GetStateDetails(state, index, providers) {
               : false }
             <div className='tinyFont'>&nbsp;</div>
           </td>
-          <td className='tdChart'>
-            { zipFilter !== null && providerFilter !== null ? (<>
-              <div><span className='doseCount'>{available}</span> <span className='doseLabel'> avail @{toDate(provider[reportDateColNum])}</span></div>
-              <div className='tinyFont'>&nbsp;</div>
-            </>) :
-            <>
-            <a href={linkToProvider}>
-              <TrackVisibility partialVisibility offset={1000}>
-                {({ isVisible }) =>  isVisible && <DoseViewer medicine={medicine} dosesInBox={dosesInBox} zipCode={zipCode} provider={provider_x} mini='true' available={available} state={state_code}
-                    site={medicineLower} dataDate={dataDate} popUpdate={provider[reportDateColNum].substring(5,10)} />
-                }
-              </TrackVisibility>
-            </a>
-            </>}
-          </td>
+          { locationsOnly !== "true" ?
+            <td className='tdChart'>
+              { zipFilter !== null && providerFilter !== null ? (<>
+                <div><span className='doseCount'>{available}</span> <span className='doseLabel'> avail @{toDate(provider[reportDateColNum])}</span></div>
+                <div className='tinyFont'>&nbsp;</div>
+              </>) :
+              <>
+              <a href={linkToProvider}>
+                <TrackVisibility partialVisibility offset={1000}>
+                  {({ isVisible }) =>  isVisible && <DoseViewer medicine={medicine} dosesInBox={dosesInBox} zipCode={zipCode} provider={provider_x} mini='true' available={available} state={state_code}
+                      site={medicineLower} dataDate={dataDate} popUpdate={provider[reportDateColNum].substring(5,10)} />
+                  }
+                </TrackVisibility>
+              </a>
+              </>}
+            </td> 
+            : false 
+          }
         </tr>
-        {zipFilter !== null && providerFilter !== null && pageLocation==="" ?
+        {locationsOnly !== "true" && zipFilter !== null && providerFilter !== null && pageLocation==="" ?
           <tr key={index} className={lastCityStyle}>
             <td colSpan='3'>
               <DoseViewer medicine={medicine} dosesInBox={dosesInBox} zipCode={zipFilter} provider={provider_x} available={available} site={medicineLower} dataDate={dataDate} popUpdate={provider[reportDateColNum].substring(5,10)} />
@@ -595,7 +614,7 @@ function GetStateDetails(state, index, providers) {
           </tr>
           :false
         }
-        {zipFilter !== null && providerFilter !== null && pageLocation!=="" && medicine === "Evusheld" ?
+        {locationsOnly !== "true" && zipFilter !== null && providerFilter !== null && pageLocation!=="" && medicine === "Evusheld" ?
           <tr key={index} className={lastCityStyle}>
             <td colSpan='3'>
               <DoseViewer medicine={medicine} dosesInBox={dosesInBox} zipCode={zipFilter} provider={provider_x} />
@@ -714,13 +733,15 @@ function loadData() {
     }
   });
 
-  Papa.parse(baseUri + "data/therapeutics/"+medicineLower+"/doses-given-per-week.csv", {
-    download: true,
-    complete: function(results) {
-      dosesGivenPerWeek = results.data;
-      renderPage();
-    }
-  });
+  if (medicineLower !== 'remdesivir') {
+    Papa.parse(baseUri + "data/therapeutics/"+medicineLower+"/doses-given-per-week.csv", {
+      download: true,
+      complete: function(results) {
+        dosesGivenPerWeek = results.data;
+        renderPage();
+      }
+    });
+  }
 
   if (medicineLower === "paxlovid") {
     testToTreat = {};
@@ -743,6 +764,7 @@ function Medicine(props) {
   medicine = props.type;
   medicineLower = props.typeLower;
   dosesInBox = props.dosesInBox;
+  locationsOnly = props.locationsOnly;
   status = props.status;
 
   loadData();
