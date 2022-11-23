@@ -466,7 +466,7 @@ function GetNationalDetails(states, providers) {
               <th>Provider</th>
               { locationsOnly !== "true" ?
               <th>Doses</th>
-              : false }
+              : <th>Info</th> }
             </tr>
           </thead> : false }
           <tbody>
@@ -521,6 +521,12 @@ function GetStateDetails(state, index, providers) {
     var county = provider[4];
     var city = provider[3];
     var zipCode = provider[6].substring(0,5);
+    var webLinks = null;
+    var phone = null;
+    if (locationsOnly === "true") {
+      webLinks = provider[14].split(' ');
+      phone = provider[15];
+    }
 
     cityList.add(city);
     zipList.add(zipCode);
@@ -603,7 +609,13 @@ function GetStateDetails(state, index, providers) {
               </a>
               </>}
             </td> 
-            : false 
+            : 
+            <td>
+              {phone !== "" ? <><span style={{whiteSpace:'nowrap'}}>{phone}</span><br/></> : false}
+              { cityList != null ? webLinks.map((link,index) => {
+              return <><a href={link}>website {index >= 1 ? index + 1 : ''}</a><br/></>
+            }) : false }
+            </td> 
           }
         </tr>
         {locationsOnly !== "true" && zipFilter !== null && providerFilter !== null && pageLocation==="" ?
