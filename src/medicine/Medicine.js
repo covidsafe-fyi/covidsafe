@@ -295,10 +295,10 @@ function NavigationHeader(props) {
             <option value='evusheld'>Evusheld</option>
             <option disabled="disabled">----</option>
             <option value='paxlovid'>Paxlovid</option>
-            <option value='bebtelovimab'>Bebtelovimab</option>
             <option value='lagevrio'>Molnupiravir</option>
             <option value='remdesivir'>Remdesivir</option>
             {medicineLower === 'sotrovimab' ? <option value='sotrovimab'>Sotrovimab</option> : false }
+            {medicineLower === 'bebtelovimab' ? <option value='bebtelovimab'>Bebtelovimab</option> : false }
           </select>
           { medicineLower === "lagevrio" ? " (Lagevrio) " : " "}
            providers in:
