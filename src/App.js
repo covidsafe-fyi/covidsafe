@@ -184,11 +184,12 @@ function App() {
                     </h3>
                     <p>You need to get a prescription for a treatment from your doctor, a <a href="https://aspr.hhs.gov/TestToTreat">Test-to-Treat location</a>, or a telehealth doctor. Then find a pharmacy near you with these treatments in stock:</p>
                     &#8729; <a href="/paxlovid" rel="noopener">Paxlovid locator</a> (consult <a href='https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/ritonavir-boosted-nirmatrelvir--paxlovid-/paxlovid-drug-drug-interactions/'>drug-drug interactions</a>)<br/>
-                    &#8729; <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-announces-bebtelovimab-not-currently-authorized-any-us-region" rel="noopener">Bebtelovimab no longer authorized - 11/30/2022 (fda.com)</a><br/> 
                     &#8729; <a href="/lagevrio" rel="noopener">Molnuripavir (Lagevrio) locator</a><br/>
                     <p>Remdesivir</p>
                     &#8729; <a href="/remdesivir" rel="noopener">Remdesivir (outpatient) locator</a><br/>
                     &#8729; <a href="https://www.covid19treatmentguidelines.nih.gov/therapies/antiviral-therapy/remdesivir/" rel="noopener">Remdesivir info (nih.gov)</a><br/>
+                    <p>NO LONGER USEFUL</p>
+                    &#8729; <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-announces-bebtelovimab-not-currently-authorized-any-us-region" rel="noopener">Bebtelovimab no longer authorized - 11/30/2022 (fda.com)</a><br/> 
                   </div>
                 </div>
 
