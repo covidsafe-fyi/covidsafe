@@ -20,8 +20,8 @@ ReactDOM.render(
         <Route exact path='/evusheld' element={<Medicine typeLower='evusheld' type='Evusheld' dosesInBox='24' />}></Route>
         <Route exact path='/evusheld/order' element={<EvusheldOrder />}></Route>
         <Route exact path='/paxlovid' element={<Medicine typeLower='paxlovid' type='Paxlovid' dosesInBox='20' />}></Route>
-        <Route exact path='/bebtelovimab' element={<Medicine typeLower='bebtelovimab' type='Bebtelovimab' dosesInBox='5' />}></Route>
-        <Route exact path='/sotrovimab' element={<Medicine typeLower='sotrovimab' type='Sotrovimab' dosesInBox='5' status='Sotrovimab is no longer effective against current Covid variants, so please use current treatments, such as: Paxlovid, Bebtelovimab, Lagevrio'/>}></Route>
+        <Route exact path='/bebtelovimab' element={<Medicine typeLower='bebtelovimab' type='Bebtelovimab' dosesInBox='5' status='Bebtelovimab is no longer effective against current Covid variants, so please use current treatments, such as: Paxlovid, Remdesivir, Lagevrio/>}></Route>
+        <Route exact path='/sotrovimab' element={<Medicine typeLower='sotrovimab' type='Sotrovimab' dosesInBox='5' status='Sotrovimab is no longer effective against current Covid variants, so please use current treatments, such as: Paxlovid, Remdesivir, Lagevrio'/>}></Route>
         <Route exact path='/lagevrio' element={<Medicine typeLower='lagevrio' type='Lagevrio (molnupiravir)' dosesInBox='24' />}></Route>
         <Route exact path='/remdesivir' element={<Medicine typeLower='remdesivir' type='Remdesivir (outpatient)' locationsOnly='true' />}></Route>
       </Routes>
