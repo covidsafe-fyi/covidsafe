@@ -72,6 +72,7 @@ function App() {
                     &#8729; <span><a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-authorizes-revisions-evusheld-dosing" rel="noopener">6/2022: FDA authorizes Evusheld doses every 6 months (since last 150/150 dose)</a> (fda.gov)</span><br/>
                     &#8729; <span><a href="https://www.fda.gov/emergency-preparedness-and-response/mcm-legal-regulatory-and-policy-framework/expiration-dating-extension#COVIDtherapeutics" rel="noopener">6/2022: Evusheld expiration dates adjusted, adding 6 months</a> (fda.gov)</span><br/>
                     &#8729; <span><a href="https://aspr.hhs.gov/COVID-19/Therapeutics/updates/Pages/important-update-27July2022.aspx" rel="noopener">7/2022: Doctors can now order an Evusheld dose with a simple web form</a> (hhs.gov)</span>
+                    &#8729; <span><a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-releases-important-information-about-risk-covid-19-due-certain-variants-not-neutralized-evusheld" rel="noopener">10/2022: Increased risk of COVID-19 due to certain variants not neutralized by Evusheld</a> (fda.gov)</span>
 
                     <p>Evusheld Guide:</p>
                     &#8729; Tips and trick to get Evusheld if you are qualified with <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
