@@ -4,7 +4,6 @@ import tests from './assets/img/beaker.svg';
 import syringe from './assets/img/syringe.svg';
 import treatment from './assets/img/treatment.svg';
 import ventilation from './assets/img/ventilation-icon.svg';
-import vaccineSchedule from './assets/img/VaccinationScheduleAtAGlance-20.png';
 import React from 'react';
 
 function App() {
