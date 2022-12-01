@@ -39,9 +39,8 @@ function App() {
                       <span>Vaccines</span>
                     </h3>
                     <p>Being <i>"up to date"</i> with your COVID-19 vaccines is the best way to protect against severe illness and hospitalization from COVID-&#8288;19.</p>
-                    <p>CDC At-a-Glance schedule:</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/downloads/COVID-19-vacc-schedule-at-a-glance-508.pdf"><img src={vaccineSchedule} alt="CDC's At-a-Glance Vaccination Schedules Document" /></a></p>
-                    <p>Customized Schedule for You/Loved Ones:</p>
-                    &#8729; <a href="/vaccine-time" rel="noopener">Vaccine-Time: when should you (&amp; loved ones) schedule your next vaccine for?</a><br/>
+                    <p>CDC Vaccination Schedule Infographic:</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-most-people.png"><img src='https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-most-people.png' alt="CDC's At-a-Glance Vaccination Schedules Document" /></a></p>
+                    <p>CDC Vaccination Schedule Infographic (Immunocompromised):</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-immunocompromised.png"><img src='https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-immunocompromised.png' alt="CDC's At-a-Glance Vaccination Schedules Document" /></a></p>
                     <p>Schdedule a Vaccine/Booster:</p>
                     &#8729; <a href="https://vaccines.gov/search" rel="noopener">Find a vaccine or booster at Vaccines.gov</a>
                     <p>Latest Clinical Guidance for Covid Vaccinations:</p>

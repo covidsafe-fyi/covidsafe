@@ -15,19 +15,7 @@ function VaccineTime() {
   return (
     <div className="VaccineTime">
       <BreadCrumbBar />
-      <h3 className="p-3 text-center">Track and Plan Vaccination Timing for Your Loved Ones</h3>
-      <div className="p-3 text-center">NOTE: don't use this as a definitive source yet...This site is a work in progress! Send any bug reports or questions to: rob@relyeas.net</div>
-      <div className="p-3 text-center">PRIVACY: Your data is never sent to our server. We don't store anything.</div>
-      <br/>
-      <People />
- 
-      <br />
-
-      {supportAd}
-      <br />
-
-      <div><b>Links:</b> <a href='https://www.cdc.gov/vaccines/covid-19/downloads/COVID-19-vacc-schedule-at-a-glance-508.pdf'>CDC Vaccination Schedule Diagram</a></div>
-      <br />
+      <p>Vaccine-Time is no longer useful, given schedule changes that came with the bivalent booster. So we've discontinued it. Please see other materials in the <a href='/#vaccines'>vaccines section of our home page</a></p>
     </div>
   );
 }
