@@ -337,7 +337,7 @@ function HarvestInfo() {
     [
       { locationsOnly !== "true" ?
         <><a href={baseUri + "data/therapeutics/"+medicineLower+"/"+medicineLower+"-providers.csv"}>Data</a> harvested from <a href="https://healthdata.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8">healthdata.gov</a>, which last updated: {dataUpdated}.</>
-        : <><span>{medicine} data manually tracked. Please email <a href="mailto:remdesivir-data@relyeas.net">remdesivir-data@relyeas.net</a> with additions/corrections.</span>&nbsp;</>
+        : <><span>{medicine} is only available in limited places, we are still growing the list. Inpatient remdesivir available many places. Please email <a href="mailto:remdesivir-data@relyeas.net">remdesivir-data@relyeas.net</a> with additions/corrections.</span>&nbsp;</>
       }
       Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
   </div>
