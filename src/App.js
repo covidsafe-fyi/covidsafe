@@ -74,6 +74,8 @@ function App() {
                     &#8729; <span><a href="https://aspr.hhs.gov/COVID-19/Therapeutics/updates/Pages/important-update-27July2022.aspx" rel="noopener">7/2022: Doctors can now order an Evusheld dose with a simple web form</a> (hhs.gov)</span>
                     <br/>
                     &#8729; <span><a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-releases-important-information-about-risk-covid-19-due-certain-variants-not-neutralized-evusheld" rel="noopener">10/2022: Increased risk of COVID-19 due to certain variants not neutralized by Evusheld</a> (fda.gov)</span>
+                    <br/>
+                    &#8729; <span><a href="https://www.astrazeneca.com/media-centre/statements/2022/first-participant-dosed-in-supernova-phase-i-iii-trial-evaluating-azd5156-for-prevention-of-covid-19.html" rel="noopener">12/2022: 1st participant dosed in SUPERNOVA Phase I/III trial evaluating AZD5156, a next-gen long-acting antibody combination, for prevention of COVID-19</a> (astrazeneca.com)</span>
 
                     <p>Evusheld Guide:</p>
                     &#8729; Tips and trick to get Evusheld if you are qualified with <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
