@@ -612,7 +612,7 @@ function GetStateDetails(state, index, providers) {
             : 
             <td>
               {phone !== "" ? <><span style={{whiteSpace:'nowrap'}}>{phone}</span><br/></> : false}
-              { cityList != null ? webLinks.map((link,index) => {
+              { cityList != null && webLinks.length == 1 && webLinks[0] != "" ? webLinks.map((link,index) => {
               return <><a href={link}>website {index >= 1 ? index + 1 : ''}</a><br/></>
             }) : false }
             </td> 
