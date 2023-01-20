@@ -315,7 +315,7 @@ function NavigationHeader(props) {
       { providerFilter !== null ? <div className='centered'>Provider contains '{providerFilter}' <a href={linkToState}>(clear)</a> </div> : false }
       { zipFilter !== null ? <div className='centered'>Zip Code: {zipFilter} <a href={linkToState}>(clear)</a></div> : false }
       { status == null ? <div onClick={mapClick} className='mapDiv'>
-        <MapChart id='mapChart' />
+        <MapChart id='mapChart' medicine={medicineLower} />
       </div>
       : <><div>&nbsp;</div><h2 className='centered'>{status}</h2></>}
       { medicineLower === "evusheld" ? <div className='centered'>Use: <a href='/evusheld/guide/'>Evusheld Guide</a> for tips and info to get Evusheld<br/></div> : false }

@@ -27,6 +27,10 @@ const stateStyle = {
 const styles = {
   text: {
     pointerEvents: 'none',
+  },
+  zeroText : {
+    pointerEvents: 'none',
+    stroke: 'red',
   }
 }
 
@@ -44,7 +48,7 @@ const offsets = {
   DC: [49, 21]
 };
 
-const MapChart = () => {
+const MapChart = (props) => {
   return (
     <ComposableMap projection="geoAlbersUsa">
       <Geographies geography={geoUrl} id="mapGeographies">
@@ -71,8 +75,8 @@ const MapChart = () => {
                     centroid[0] < -67 &&
                     (Object.keys(offsets).indexOf(cur.id) === -1 ? (
                       <Marker coordinates={centroid}>
-                        <text y="2" fontSize={14} textAnchor="middle" style={styles.text}>
-                          {cur.id}
+                        <text y="2" fontSize={14} textAnchor="middle" style={props.medicine=="remdesivir"&&cur.remdesivir===0?styles.zeroText:styles.text}>
+                          {cur.id} {props.medicine=="remdesivir"?cur.remdesivir:""}
                         </text>
                       </Marker>
                     ) : (
@@ -81,8 +85,8 @@ const MapChart = () => {
                         dx={offsets[cur.id][0]}
                         dy={offsets[cur.id][1]}
                       >
-                        <text x={4} fontSize={14} alignmentBaseline="middle" style={styles.text}>
-                          {cur.id}
+                        <text x={4} fontSize={14} alignmentBaseline="middle" style={props.medicine=="remdesivir"&&cur.remdesivir===0?styles.zeroText:styles.text}>
+                          {cur.id} {props.medicine=="remdesivir"?cur.remdesivir:""}
                         </text>
                       </Annotation>
                     ))}
