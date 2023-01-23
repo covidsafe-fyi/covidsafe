@@ -15,7 +15,7 @@
     { "id": "GU", "val": "66" , "index":0 , "remdesivir":0 },
     { "id": "HI", "val": "15" , "index":28 , "remdesivir":0 },
     { "id": "ID", "val": "16" , "index":51 , "remdesivir":0 },
-    { "id": "IL", "val": "17" , "index":22 , "remdesivir":0 },
+    { "id": "IL", "val": "17" , "index":22 , "remdesivir":2 },
     { "id": "IN", "val": "18" , "index":6 , "remdesivir":0 },
     { "id": "IA", "val": "19" , "index":29 , "remdesivir":0 },
     { "id": "KS", "val": "20" , "index":7 , "remdesivir":0 },
