@@ -4,7 +4,7 @@
     { "id": "AS", "val": "60" , "index":0 , "remdesivir":0 },
     { "id": "AZ", "val": "04" , "index":2 , "remdesivir":0 },
     { "id": "AR", "val": "05" , "index":24 , "remdesivir":0 },
-    { "id": "CA", "val": "06" , "index":25 , "remdesivir":8 },
+    { "id": "CA", "val": "06" , "index":25 , "remdesivir":10 },
     { "id": "CO", "val": "08" , "index":3 , "remdesivir":1 },
     { "id": "CT", "val": "09" , "index":19 , "remdesivir":0 },
     { "id": "DE", "val": "10" , "index":26 , "remdesivir":0 },
