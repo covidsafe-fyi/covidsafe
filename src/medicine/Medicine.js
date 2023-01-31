@@ -17,7 +17,7 @@ var zipFilter = null;
 var providerFilter = null;
 var pageLocation = "";
 var dataUpdated = null;
-var branch = "main";
+var branch = "asprRemdesivir";
 var baseUri = "https://raw.githubusercontent.com/rrelyea/covid-therapeutics/" + branch + "/";
 var dataDate = null;
 var currentState = null;
@@ -524,8 +524,13 @@ function GetStateDetails(state, index, providers) {
     var webLinks = null;
     var phone = null;
     if (locationsOnly === "true") {
-      webLinks = provider[14].split(' ');
-      phone = provider[15];
+      var chunks = provider[14].split('|');
+      phone = chunks[0];
+      if (chunks.length > 1) {
+          webLinks = chunks[1].split(' ');
+      } else {
+        webLinks = { };
+      }
     }
 
     cityList.add(city);
