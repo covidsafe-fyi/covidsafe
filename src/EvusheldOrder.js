@@ -29,6 +29,7 @@ function EvusheldOrder() {
                       </div>
                     </h3>
                     
+                    <h3>NOTE: Evusheld is no long effective against current Covid variants (https://www.fda.gov/drugs/drug-safety-and-availability/fda-announces-evusheld-not-currently-authorized-emergency-use-us)</h3>
                     <p>
                       Evusheld Order Form for Small Volume Orders (1-3 patient courses):
                     </p>

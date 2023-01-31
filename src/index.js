@@ -17,7 +17,7 @@ ReactDOM.render(
       <Routes>
         <Route exact path='/' element={< App />}></Route>
         <Route exact path='/vaccine-time' element={< VaccineTime />}></Route>
-        <Route exact path='/evusheld' element={<Medicine typeLower='evusheld' type='Evusheld' dosesInBox='24' />}></Route>
+        <Route exact path='/evusheld' element={<Medicine typeLower='evusheld' type='Evusheld' dosesInBox='24' status='Evusheld is no long effective against current Covid variants (https://www.fda.gov/drugs/drug-safety-and-availability/fda-announces-evusheld-not-currently-authorized-emergency-use-us)' />}></Route>
         <Route exact path='/evusheld/order' element={<EvusheldOrder />}></Route>
         <Route exact path='/paxlovid' element={<Medicine typeLower='paxlovid' type='Paxlovid' dosesInBox='20' />}></Route>
         <Route exact path='/bebtelovimab' element={<Medicine typeLower='bebtelovimab' type='Bebtelovimab' dosesInBox='5' status='Bebtelovimab is no longer effective against current Covid variants (https://www.fda.gov/drugs/drug-safety-and-availability/fda-announces-bebtelovimab-not-currently-authorized-any-us-region), so please use current treatments, such as: Paxlovid, Remdesivir, Lagevrio'/>}></Route>

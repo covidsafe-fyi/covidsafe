@@ -58,12 +58,12 @@ function App() {
                       </div>
                       <span>More Protection for the Immunocompromised</span>
                     </h3>
-                    <p>The latest guidance from cdc.gov for those who are immunocompromised, including where to get preventative treatment (Evusheld):</p>
+                    <p>The latest guidance from cdc.gov for those who are immunocompromised:</p>
                     &#8729; <a href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html#immunocompromised" rel="noopener">CDC guidance for immunocompromised</a>
                     <p>
                       Evusheld:
                     </p>
-                    &#8729; a preventive medicine that immunocompromised, in consultation with their doctors, should consider to get extra needed protection.
+                    &#8729; a preventive medicine that immunocompromised used between 12/2021 and 1/2023.
                     <p>
                       Evusheld News:
                     </p>
@@ -75,17 +75,20 @@ function App() {
                     <br/>
                     &#8729; <span><a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-releases-important-information-about-risk-covid-19-due-certain-variants-not-neutralized-evusheld" rel="noopener">10/2022: Increased risk of COVID-19 due to certain variants not neutralized by Evusheld</a> (fda.gov)</span>
                     <br/>
+                    &#8729; <span><a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-announces-evusheld-not-currently-authorized-emergency-use-us" rel="noopener">1/2023: Evusheld no longer authorized for use in US</a> (fda.gov)</span>
+                    
+                    <p>
+                      Evusheld2 News:
+                    </p>
                     &#8729; <span><a href="https://www.astrazeneca.com/media-centre/statements/2022/first-participant-dosed-in-supernova-phase-i-iii-trial-evaluating-azd5156-for-prevention-of-covid-19.html" rel="noopener">12/2022: 1st participant dosed in SUPERNOVA Phase I/III trial evaluating AZD5156, a next-gen long-acting antibody combination, for prevention of COVID-19</a> (astrazeneca.com)</span>
+                    <br/>
+                    
 
                     <p>Evusheld Guide:</p>
-                    &#8729; Tips and trick to get Evusheld if you are qualified with <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>
-
-                    <p>Evusheld Order Form (for Doctors):</p>
-                    &#8729; HHS.gov provides a new, simpler way for a doctor to get Evusheld for patients: <a href="/evusheld/order" rel="noopener">Order Evusheld Dose</a>
-
-                    <p>Evusheld Provider List (by State/County):</p>
+                    &#8729; Tips and trick to get (the now discontinued) Evusheld: <a href="/evusheld/guide/" rel="noopener">Evusheld Guide</a>                    
+                    <p>NO LONGER USEFUL -Evusheld Provider List:</p>
                     &#8729; <a href="/evusheld" rel="noopener">Evusheld Locator at CovidSafe.fyi/evusheld</a>
-                    
+
                   </div>
                 </div>
               </div>
