@@ -75,8 +75,8 @@ const MapChart = (props) => {
                     centroid[0] < -67 &&
                     (Object.keys(offsets).indexOf(cur.id) === -1 ? (
                       <Marker coordinates={centroid}>
-                        <text y="2" fontSize={14} textAnchor="middle" style={props.medicine==="remdesivir"&&cur.remdesivir===0?styles.zeroText:styles.text}>
-                          {cur.id} {props.medicine==="remdesivir"?cur.remdesivir:""}
+                        <text y="2" fontSize={14} textAnchor="middle" style={props.medicine==="Rremdesivir"&&cur.remdesivir===0?styles.zeroText:styles.text}>
+                          {cur.id} {props.medicine==="Rremdesivir"?cur.remdesivir:""}
                         </text>
                       </Marker>
                     ) : (
@@ -85,8 +85,8 @@ const MapChart = (props) => {
                         dx={offsets[cur.id][0]}
                         dy={offsets[cur.id][1]}
                       >
-                        <text x={4} fontSize={14} alignmentBaseline="middle" style={props.medicine==="remdesivir"&&cur.remdesivir===0?styles.zeroText:styles.text}>
-                          {cur.id} {props.medicine==="remdesivir"?cur.remdesivir:""}
+                        <text x={4} fontSize={14} alignmentBaseline="middle" style={props.medicine==="Rremdesivir"&&cur.remdesivir===0?styles.zeroText:styles.text}>
+                          {cur.id} {props.medicine==="Rremdesivir"?cur.remdesivir:""}
                         </text>
                       </Annotation>
                     ))}
