@@ -339,7 +339,7 @@ function HarvestInfo() {
         <><a href={baseUri + "data/therapeutics/"+medicineLower+"/"+medicineLower+"-providers.csv"}>Data</a> harvested from <a href="https://healthdata.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8">healthdata.gov</a>, which last updated: {dataUpdated}.</>
         : <><span>{medicine} is only available in limited places, we are still growing the list. Inpatient remdesivir available many places. Please email <a href="mailto:remdesivir-data@relyeas.net">remdesivir-data@relyeas.net</a> with additions/corrections.</span>&nbsp;</>
       }
-      Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
+      Support: <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://paypal.me/RobRelyea'>paypal</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>]
   </div>
   : false;
 }
@@ -477,13 +477,6 @@ function GetNationalDetails(states, providers) {
 }
 
 
-const supportAd = <tr>
-  <td className='tdAd' colSpan='2'><b>SUPPORT</b>: Please enable <a href='https://www.geekwire.com/2022/after-wife-got-cancer-microsoft-engineer-built-a-tool-to-locate-anti-covid-drug-for-immunocompromised/'>me</a> to provide this helpful info to you (ad free) by giving a small donation:</td>
-  <td className='tdAd'>
-  <b>Sponsor via</b> <a href='https://buymeacoffee.com/rrelyea'>buymeacoffee.com</a> or <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a>
-  </td>
-  </tr>;
-
 function GetStateDetails(state, index, providers) {
   if (state[3].trim() === "") return null;
 
@@ -578,8 +571,6 @@ function GetStateDetails(state, index, providers) {
           }
         </>;
       
-      var placeSupportAd = Math.floor(Math.random() * 33) === 0;
-
       return <>
         <tr key={index} className={lastCityStyle}>
           <td>
@@ -639,7 +630,6 @@ function GetStateDetails(state, index, providers) {
           </tr>
           :false
         }
-        {placeSupportAd ? supportAd : false}
       </>
     } else {
       return false;
@@ -673,7 +663,6 @@ function GetStateDetails(state, index, providers) {
   }
 
   if (header != null || (totals != null && totals.providerCount !== 0) || providerList.length !== 0) {
-      providerList.push(supportAd); // place support ad to tail end of providers
     return [header, totals, providerList, Array.from(cityList).sort(), Array.from(zipList).sort()];
   } else {
     return false;
@@ -695,7 +684,7 @@ function Footer() {
   return <>
     <div className='smallerFont'>&nbsp;</div>
     <div className='smallerCentered'>
-      <b>Why I built this site:</b> <a href='https://www.geekwire.com/2022/after-wife-got-cancer-microsoft-engineer-built-a-tool-to-locate-anti-covid-drug-for-immunocompromised/'>geekwire</a>, <a href='https://cnn.com/2022/04/13/opinions/evusheld-immunocompromised-covid-19-equity-relyea/index.html'>CNN op-ed</a> <b>Contact Info:</b> <a href='https://twitter.com/rrelyea'>twitter</a>, <a href='https://linktr.ee/rrelyea'>email/more</a> <b>Sponsor site:</b> <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a> <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">/covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a>
+      <b>Why I built this site:</b> <a href='https://www.geekwire.com/2022/after-wife-got-cancer-microsoft-engineer-built-a-tool-to-locate-anti-covid-drug-for-immunocompromised/'>geekwire</a>, <a href='https://cnn.com/2022/04/13/opinions/evusheld-immunocompromised-covid-19-equity-relyea/index.html'>CNN op-ed</a> <b>Contact Info:</b> <a href='https://twitter.com/rrelyea'>twitter</a>, <a href='https://linktr.ee/rrelyea'>email/more</a> <b>Sponsor site:</b> <a href='https://buymeacoffee.com/rrelyea'>coffee</a>, <a href='https://paypal.me/RobRelyea'>paypal</a>, <a href='https://venmo.com/code?user_id=2295481921175552954'>venmo</a> <b>Programmers:</b> <a href="https://github.com/covidsafe-fyi/covidsafe">/covidsafe</a>, <a href="https://github.com/rrelyea/covid-therapeutics">/covid-therapeutics</a>
     </div>
     <div className='smallerCentered'>&nbsp;</div>
   </>;
