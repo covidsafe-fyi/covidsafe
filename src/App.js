@@ -38,8 +38,7 @@ function App() {
                       <span>Vaccines</span>
                     </h3>
                     <p>Being <i>"up to date"</i> with your COVID-19 vaccines is the best way to protect against severe illness and hospitalization from COVID-&#8288;19.</p>
-                    <p>CDC Vaccination Schedule Infographic:</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-most-people.png"><img src='https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-most-people.png' alt="CDC's At-a-Glance Vaccination Schedules Document" /></a></p>
-                    <p>CDC Vaccination Schedule Infographic (Immunocompromised):</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-immunocompromised.png"><img src='https://www.cdc.gov/vaccines/covid-19/images/COVID19-vaccination-schedule-immunocompromised.png' alt="CDC's At-a-Glance Vaccination Schedules Document" /></a></p>
+                    <p>CDC Vaccination Schedule Infographic:</p><p className='lt50 mt20'><a href="https://www.cdc.gov/vaccines/covid-19/downloads/covid19-vaccination-recommendations-most-people.pdf">CDC Covid Vaccination Recommendations</a></p>
                     <p>Schdedule a Vaccine/Booster:</p>
                     &#8729; <a href="https://vaccines.gov/search" rel="noopener">Find a vaccine or booster at Vaccines.gov</a>
                     <p>Latest Clinical Guidance for Covid Vaccinations:</p>
